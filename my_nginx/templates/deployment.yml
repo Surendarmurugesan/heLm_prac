@@ -2,3 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.metadata.name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.metadata.name }}
+  replicas: {{ .Values.replicaCount }}
+  strategy: {{ .Values.updateStrategy }}

@@ -1,0 +1,6 @@
+replicaCount: 1
+updateStrategy: 
+  type: RollingUpdate
+  rollingUpdate:
+    maxUnavailable: 1
+

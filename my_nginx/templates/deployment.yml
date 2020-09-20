@@ -1,14 +1,4 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "my_nginx.name" . }}
-spec:
-  selector:
-    matchLabels:
-      app: {{ template "my_nginx.name" . }}
-  replicas: {{ .Values.replicaCount }}
-  strategy: {{ .Values.updateStrategy }}
-  template:
-    metadata:
-      labels:
-        app: {{ template "my_nginx.name" . }}
+  name: {{ .Values.metadata.name }}
